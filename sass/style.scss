@@ -750,10 +750,10 @@ h1, h2, h3, h4, h5, h6, figure {
 	width: 100%;
 	display: table;
 	overflow: hidden;
-	@media screen and(max-width: $screen-sm){
+	@media screen and (max-width: $screen-sm){
 		height: 400px;
 	}
-	@media screen and(max-width: $screen-xs){
+	@media screen and (max-width: $screen-xs){
 		height: 270px;
 	}	
 	.desc{
@@ -779,7 +779,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			-webkit-transform: translate3d(0, 15px, 0);
 			transform: translate3d(0, 15px, 0);
 		}
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			opacity: 1;
 			background: rgba($brand-white,.6);
 			h3{
@@ -857,10 +857,10 @@ h1, h2, h3, h4, h5, h6, figure {
 		background-repeat: no-repeat;
 		position: relative;
 		height: 300px;
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			height: 400px;
 		}
-		@media screen and(max-width: $screen-xs){
+		@media screen and (max-width: $screen-xs){
 			height: 270px;
 		}
 	}
@@ -878,7 +878,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 		@include transition(.3s);
 
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			padding: 10px;
 		}
 
@@ -897,7 +897,7 @@ h1, h2, h3, h4, h5, h6, figure {
 				list-style: none;
 				display: inline-block;
 				margin-left: 10px;
-				@media screen and(max-width: $screen-sm){
+				@media screen and (max-width: $screen-sm){
 					font-size: 14px;
 				}
 				&:first-child{
@@ -952,14 +952,14 @@ h1, h2, h3, h4, h5, h6, figure {
 		position: relative;
 		@include flex();
 		@include flexwrap();
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			display: none;
 		}
 	}
 	.choose{
 		width: 50%;
 		padding: 4em;
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			width: 100%;
 			padding: 4em 1em;
 		}
@@ -1278,4 +1278,56 @@ input[type="text"] {
 	.js & {
 		opacity: 0;
 	}
+}
+
+// Project card styles for modern portfolio
+.project-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+
+    p {
+        color: #666;
+        line-height: 1.6;
+        flex-grow: 1;
+        margin-bottom: 20px;
+    }
+
+    .project-tech {
+        margin: 15px 0;
+        font-size: 0.9em;
+        color: #888;
+
+        span {
+            background: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    }
+
+    .btn {
+        margin-top: auto;
+        align-self: flex-start;
+    }
 }

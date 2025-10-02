@@ -1,0 +1,27 @@
+{
+  "name": "ml-engineer-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for ML Engineer & Researcher",
+  "main": "index.html",
+  "scripts": {
+    "setup": "python3 -m venv .venv",
+    "dev": "source .venv/bin/activate && python -m http.server 8000",
+    "start": "source .venv/bin/activate && python -m http.server 8000",
+    "build": "echo 'Static site - no build required'",
+    "sass": "sass sass/style.scss css/style.css --watch",
+    "sass-build": "sass sass/style.scss css/style.css"
+  },
+  "keywords": [
+    "portfolio",
+    "machine-learning",
+    "data-engineering",
+    "optimization",
+    "computer-vision",
+    "reinforcement-learning"
+  ],
+  "author": "ML Engineer",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}
